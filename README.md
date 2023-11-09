@@ -4,7 +4,7 @@
 ```bash
 npm install
 ```
-## Ru
+## Run
 ```bash
 npm run dev
 ```
