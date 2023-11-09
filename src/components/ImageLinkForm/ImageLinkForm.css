@@ -1,0 +1,37 @@
+.phrase {
+  color: var(--main-light);
+  background-color: var(--main-background);
+  text-align: center;
+  font-size: 4em;
+  position: absolute;
+  width: 100vw;
+  top: 6%;
+  z-index: -1;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.input {
+  outline: none;
+  margin-right: 5px;
+  width: 35rem;
+  background-color: var(--main-white);
+  color: var(--main-light);
+  border: none;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.btn-detect {
+  border: none;
+  margin-right: 10px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+}
+
+.btn-detect:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Roboto+Condensed:wght@700&display=swap");
+
+:root {
+  --main-white: #e3e1c8;
+  --main-blue: #518f8b;
+  --main-background: #472c33;
+  --main-light: #e6462d;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--main-background);
+}
+
+.particles {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+
+.center {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
