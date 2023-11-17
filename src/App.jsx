@@ -12,6 +12,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: {
+        id: 1,
+      },
       input: "",
       imageUrl: "/svg.svg",
       boxData: {},
@@ -117,7 +120,19 @@ class App extends Component {
     )
       .then((response) => response.json())
       .then((result) => {
+
         this.displayFaceBox(this.calculateFaceLocation(result));
+
+        if (result)
+        {
+          fetch('http://localhost:3000/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: {
+              id: this.state.user.id,
+            }, 
+          }) 
+        }
       })
       .catch((error) => console.log("error", error));
   };
