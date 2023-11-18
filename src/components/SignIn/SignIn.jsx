@@ -32,6 +32,10 @@ class SignIn extends Component {
         password: this.state.password
       })
     })
+    .then(resp => resp.json())
+    .then(data => {
+      console.log(data)
+    })
 
     this.props.onChangeRoute('home');
   }
