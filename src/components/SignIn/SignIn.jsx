@@ -20,7 +20,7 @@ class SignIn extends Component {
   }
 
   onSubmitBtn = () => {
-    console.log(this.state);
+    console.log("FE state: ", this.state);
 
     fetch('http://localhost:3000/signing', {
       method: 'post',
@@ -34,10 +34,17 @@ class SignIn extends Component {
     })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data)
+      console.log("Component data:", data)
+      if (data == "true")
+      {
+        this.props.onChangeRoute('home');
+      }
+      else {
+        this.props.onChangeRoute('signin');
+      }
+      
     })
 
-    this.props.onChangeRoute('home');
   }
 
   render() {
